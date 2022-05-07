@@ -1,0 +1,140 @@
+/*text*/
+h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+h4 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+/*side bar*/
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.sidebar a, .dropdown-btn {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 100%;
+    text-align: left;
+    border: none;
+}
+.dropdown-btn{width: 100%;}
+
+.sidebar a.active, dropdown-btn.active {
+    background-color: #3f1e10;
+    color: white;
+}
+
+.dropped {
+    background-color: #555;
+    color: white;
+}
+
+.sidebar a:hover:not(.active), .dropdown-btn:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/*content*/
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+
+/*side (now hamburger) bar*/
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a, .dropdown-btn {
+        text-align: center;
+        float: none;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/*dropdown*/
+.dropdown-container {
+    display: none;
+    padding-left: 18px;
+    font-size: 85%;
+}
+
+/*style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    padding-top: 4px;
+}
+
+/*gallery construction*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/*cards*/
+.column img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 150px;
+    margin: 30px 0;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}

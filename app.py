@@ -8,18 +8,19 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 @app.route('/')
 def landing_page():
-    output = render_template('landing_page.html')
+    output = render_template('about.html')
     return output
 
 
-@app.route('/aboutus')
-def about_us():
-    output = render_template('about_us.html')
+@app.route('/about')
+def about():
+
+    output = render_template('about.html')
     return output
 
-@app.route('/centralintelligenceserviceccp')
-def attention_citizen():
-    output = render_template('attention_citizen.html')
+@app.route('/venues')
+def venues():
+    output = render_template('venue_browser.html')
     return output
 
 @app.route('/bookings', methods=['POST', 'GET'])
