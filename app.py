@@ -12,7 +12,7 @@ def landing_page():
     return output
 
 
-@app.route('/about')
+@app.route('/home')
 def about():
 
     output = render_template('about.html')
@@ -21,6 +21,31 @@ def about():
 @app.route('/venues')
 def venues():
     output = render_template('venue_browser.html')
+    return output
+
+@app.route('/the-great-hall')
+def the_great_hall():
+    output = render_template('the_great_hall.html')
+    return output
+
+@app.route('/the-outterside-centre')
+def the_outterside_centre():
+    output = render_template('the_great_hall.html')
+    return output
+
+@app.route('/fairland-pavillion')
+def fairland_pavillion():
+    output = render_template('the_great_hall.html')
+    return output
+
+@app.route('/uts-gymnasium')
+def uts_gymnasium():
+    output = render_template('the_great_hall.html')
+    return output
+
+@app.route('/the-governer-centre')
+def the_governer_centre():
+    output = render_template('the_great_hall.html')
     return output
 
 @app.route('/bookings', methods=['POST', 'GET'])
